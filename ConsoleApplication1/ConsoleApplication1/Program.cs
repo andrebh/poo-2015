@@ -10,8 +10,8 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-            int x;
-            string teste3;
+            int x = 0;
+            string teste3 = "sdgf";
         }
     }
 }
