@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FF761D96-1491-480C-8FF8-B049E2E7BE7F}</ProjectGuid>
+    <ProjectGuid>{B47812C5-7831-44B5-A197-4EAFDD428907}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>poo_paint</RootNamespace>
