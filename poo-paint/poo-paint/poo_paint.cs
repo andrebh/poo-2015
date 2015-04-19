@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using Teste;
+
 namespace poo_paint
 {
     class Retangulo
@@ -12,6 +14,7 @@ namespace poo_paint
         public int y;
         public int largura;
         public int altura;
+        private static int contador = 0;
 
         public Retangulo(int x, int y, int largura, int altura)
         {
@@ -19,12 +22,24 @@ namespace poo_paint
             this.y = y;
             this.largura = largura;
             this.altura = altura;
+            contador++;
         }
 
-        public Imprime()
+        public string Imprime()
         {
             return "Retangulo [x:"+this.x+" ,y:"+this.y+" ,l:"+this.largura+" ,a:"+this.altura+"]";
         }
+
+        public static void ZeraContador()
+        {
+            contador = 0;
+        }
+
+        public static int LeContador()
+        {
+            return contador;
+        }
+
         static void Main(string[] args)
         {
             
