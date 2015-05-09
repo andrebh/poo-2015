@@ -53,6 +53,12 @@
     <Compile Include="Teste.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\poo-paint\poo-paint.csproj">
+      <Project>{b47812c5-7831-44b5-a197-4eafdd428907}</Project>
+      <Name>poo-paint</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

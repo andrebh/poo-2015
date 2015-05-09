@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-using Teste;
+using System.Windows.Forms;
 
 namespace poo_paint
 {
-    class Retangulo
+    public class Retangulo
     {
         public int x;
         public int y;
@@ -27,7 +26,7 @@ namespace poo_paint
 
         public string Imprime()
         {
-            return "Retangulo [x:"+this.x+" ,y:"+this.y+" ,l:"+this.largura+" ,a:"+this.altura+"]";
+            return "Retangulo [x:"+this.x+" y:"+this.y+" l:"+this.largura+" a:"+this.altura+"]";
         }
 
         public static void ZeraContador()
@@ -46,3 +45,12 @@ namespace poo_paint
         }
     }
 }
+
+
+
+
+
+
+
+
+
