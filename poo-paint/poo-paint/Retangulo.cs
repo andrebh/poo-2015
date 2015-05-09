@@ -3,34 +3,54 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace poo_paint
 {
-   
-    class Retangulo
+    public class Retangulo : Figura
     {
-        public int x;
-        public int y;
-        public int l;
-        public int a;
+        
+        public int largura;
+        public int altura;
+        private static int contador = 0;
 
-        Retangulo(int direito, int esquerdo, int largura, int altura)
+        public Retangulo(int x, int y, int largura, int altura)
         {
-            this.x = direito;
-            this.y = esquerdo;
-            this.l = largura;
-            this.a = altura;
+            this.x = x;
+            this.y = y;
+            this.largura = largura;
+            this.altura = altura;
+            contador++;
         }
 
-       public string Imprime()
+        public override string Imprime()
         {
-            string Retangulo = "x" + x + ",y" + y + "l" + l + "a" + a;
+            return "Retangulo [x:"+this.x+" y:"+this.y+" l:"+this.largura+" a:"+this.altura+"]";
+        }
+
+        public static void ZeraContador()
+        {
+            contador = 0;
+        }
+
+        public static int LeContador()
+        {
+            return contador;
         }
 
         static void Main(string[] args)
         {
-            Retangulo r1 = new Retangulo();
-
+            
         }
+      
     }
 }
+
+
+
+
+
+
+
+
+
