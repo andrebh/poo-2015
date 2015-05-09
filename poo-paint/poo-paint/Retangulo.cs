@@ -7,9 +7,9 @@ using System.Windows.Forms;
 
 namespace poo_paint
 {
-    public class Retangulo : Figura
+    class Retangulo : Figura
     {
-        
+
         public int largura;
         public int altura;
         private static int contador = 0;
@@ -25,7 +25,7 @@ namespace poo_paint
 
         public override string Imprime()
         {
-            return "Retangulo [x:"+this.x+" y:"+this.y+" l:"+this.largura+" a:"+this.altura+"]";
+            return "Retangulo [x:" + this.x + " y:" + this.y + " l:" + this.largura + " a:" + this.altura + "]";
         }
 
         public static void ZeraContador()
@@ -38,11 +38,7 @@ namespace poo_paint
             return contador;
         }
 
-        static void Main(string[] args)
-        {
-            
-        }
-      
+
     }
 }
 
