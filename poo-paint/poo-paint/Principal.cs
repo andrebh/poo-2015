@@ -7,11 +7,14 @@ using System.Windows.Forms;
 
 namespace poo_paint
 {
-    class Principal
+    class Program
     {
         public static void Main(String[] args)
         {
-            Application.Run(new AreaDeDesenho());
+            AreaDeDesenho area = new AreaDeDesenho();
+            area.AdicionaFigura(new Retangulo(3, 4, 20, 50));
+            area.AdicionaFigura(new Circulo(150, 45, 20));
+            Application.Run(area);
         }
     }
 }

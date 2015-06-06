@@ -32,11 +32,12 @@
             // 
             // AreaDeDesenho
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(408, 324);
             this.Name = "AreaDeDesenho";
             this.Text = "AreaDeDesenho";
+            this.Load += new System.EventHandler(this.AreaDeDesenho_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Desenha);
             this.ResumeLayout(false);
 

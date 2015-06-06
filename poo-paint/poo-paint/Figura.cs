@@ -1,21 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
-
 
 namespace poo_paint
 {
-    class Figura
+    public class Figura
     {
-        public int x;
-        public int y;
+        protected int x;
+        protected int y;
 
         public virtual string Imprime()
         {
-            return "[x: y: l: a: raio:]";
+            return "figura[x:" + x + ",y:" + y + "]";
+        }
+
+        public virtual void Desenha(Graphics g)
+        {
         }
     }
 }

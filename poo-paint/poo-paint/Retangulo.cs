@@ -1,18 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace poo_paint
 {
-    class Retangulo : Figura
+    public class Retangulo : Figura
     {
-
-        public int largura;
-        public int altura;
-        private static int contador = 0;
+        private int largura;
+        private int altura;
+        static int contador;
 
         public Retangulo(int x, int y, int largura, int altura)
         {
@@ -20,12 +19,13 @@ namespace poo_paint
             this.y = y;
             this.largura = largura;
             this.altura = altura;
-            contador++;
+
+            contador += 1;
         }
 
         public override string Imprime()
         {
-            return "Retangulo [x:" + this.x + " y:" + this.y + " l:" + this.largura + " a:" + this.altura + "]";
+            return "retangulo[x:" + x + ",y:" + y + ",l:" + largura + ",a:" + altura + "]";
         }
 
         public static void ZeraContador()
@@ -38,15 +38,9 @@ namespace poo_paint
             return contador;
         }
 
-
+        public override void Desenha(Graphics g)
+        {
+            g.DrawRectangle(Pens.Black, x, y, largura, altura);
+        }
     }
 }
-
-
-
-
-
-
-
-
-

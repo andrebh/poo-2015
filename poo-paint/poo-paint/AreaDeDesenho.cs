@@ -12,15 +12,41 @@ namespace poo_paint
 {
     public partial class AreaDeDesenho : Form
     {
+        private static int qtdfiguras = 0;
+        Figura[] figuras = new Figura[0];
+
         public AreaDeDesenho()
         {
             InitializeComponent();
         }
 
-        private void Desenha(object sender, PaintEventArgs e)
+        public void AdicionaFigura(Figura f)
+        {
+            qtdfiguras++;
+            Array.Resize(ref figuras, (qtdfiguras));
+            figuras[qtdfiguras - 1] = f;
+        }
+
+        public void Desenha(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
-            e.Graphics.DrawRectangle(Pens.Black, 4, 4, 100, 40);
+            for (int i = 0; i < this.figuras.Length; i++)
+            {
+                Figura f = new Figura();
+                f = this.figuras[i];
+                f.Desenha(g);
+            }
+        }
+
+        public void AdicionarFigura(Figura f)
+        {
+
+
+        }
+
+        private void AreaDeDesenho_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
