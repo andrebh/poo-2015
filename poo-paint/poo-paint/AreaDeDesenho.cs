@@ -14,6 +14,8 @@ namespace poo_paint
     {
         private static int qtdfiguras = 0;
         Figura[] figuras = new Figura[0];
+        private int xini;
+        private int yini;
 
         public AreaDeDesenho()
         {
@@ -38,15 +40,16 @@ namespace poo_paint
             }
         }
 
-        public void AdicionarFigura(Figura f)
+        private void DesenhaCliqueInicial(object sender, MouseEventArgs e)
         {
-
-
+            xini = e.X;
+            yini = e.Y;
         }
 
-        private void AreaDeDesenho_Load(object sender, EventArgs e)
+        private void DesenhaCliqueFinal(object sender, MouseEventArgs e)
         {
-
+             AdicionaFigura(new Retangulo(xini, yini, (e.X - xini), (e.Y - yini)));
+             this.Invalidate();
         }
     }
 }
