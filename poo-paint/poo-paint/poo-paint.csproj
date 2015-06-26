@@ -54,6 +54,7 @@
     </Compile>
     <Compile Include="Circulo.cs" />
     <Compile Include="Figura.cs" />
+    <Compile Include="Linha.cs" />
     <Compile Include="Principal.cs" />
     <Compile Include="Retangulo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
