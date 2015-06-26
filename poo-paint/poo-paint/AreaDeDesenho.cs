@@ -48,8 +48,45 @@ namespace poo_paint
 
         private void DesenhaCliqueFinal(object sender, MouseEventArgs e)
         {
-             AdicionaFigura(new Retangulo(xini, yini, (e.X - xini), (e.Y - yini)));
-             this.Invalidate();
+            if (comboxFerramenta.SelectedIndex == 0)
+            {
+                if (e.X > xini)
+                {
+                    if (e.Y > yini)
+                    {
+                        AdicionaFigura(new Retangulo(xini, yini, (e.X - xini), (e.Y - yini)));
+                    }
+                    else
+                    {
+                        AdicionaFigura(new Retangulo(xini, e.Y, (e.X - xini), (yini - e.Y)));
+                    }
+                }
+                else
+                {
+                    if (e.Y > yini)
+                    {
+                        AdicionaFigura(new Retangulo(e.X, yini, (xini - e.X), (e.Y - yini)));
+                    }
+                    else
+                    {
+                        AdicionaFigura(new Retangulo(e.X, e.Y, (xini - e.X), (yini - e.Y)));
+                    }
+                }
+            }
+            else
+            {
+                AdicionaFigura(new Circulo(e.X, e.Y, xini - e.X));
+            }
+
+            this.Invalidate();
         }
+
+        private void AreaDeDesenho_Load(object sender, EventArgs e)
+        {
+            comboxFerramenta.Items.Add("Retangulo");
+            comboxFerramenta.Items.Add("Circulo");
+            comboxFerramenta.SelectedIndex = 0;
+        }
+
     }
 }
